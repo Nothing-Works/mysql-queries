@@ -2,9 +2,9 @@
 
 1. When group by a column, you can not do `select *`. You have to manually select some existing columns or aggregate columns.
 
-2. `SUM(liked) likes` the total number of `liked` column where it is true as `likes` variable.
+2. `SUM(liked) likes` is the total number of `liked` columns where the columns are true and set as `likes` variable.
 
-3. `SUM(!liked) dislikes` the total number of `liked` column where it is false as `dislikes` variable.
+3. `SUM(!liked) dislikes` is the total number of `liked` columns where the columns are false and set as `dislikes` variable.
 
 ```sql
 SELECT tweet_id, SUM(liked) likes, SUM(!liked) dislikes FROM likes
