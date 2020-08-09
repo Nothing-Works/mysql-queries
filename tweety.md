@@ -6,6 +6,8 @@
 
 3. `SUM(!liked) dislikes` is the total number of `liked` columns where the columns are false and set as `dislikes` variable.
 
+**NOTE: sql aggregate functions have to use with group by, because it only makes sense when using with group by.**
+
 ```sql
 SELECT tweet_id, SUM(liked) likes, SUM(!liked) dislikes FROM likes
 GROUP BY tweet_id
