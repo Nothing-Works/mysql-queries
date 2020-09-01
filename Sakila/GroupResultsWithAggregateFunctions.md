@@ -28,6 +28,8 @@ group by customer.customer_id
 
 This will not give you the expected result, because, you are trying to group by `customer_id` however for each row `rental_id` is different so mysql does not know what to do with it. It may cause error(saying that `rental_id` is not an aggregate column) or it just gives you the first `rental_id` value which is not correct in almost all cases.
 
+You may add `rental.rental_id` in the `group by` as well, it will group by the combination of `rental.rental_id` and `customer.customer_id` which means that we do not need to do the aggregate on `rental.rental_id`. (in this case it does not make any sense at all but in other cases it may be useful)
+
 2. no `group by`, only aggregate
 
 ```mysql

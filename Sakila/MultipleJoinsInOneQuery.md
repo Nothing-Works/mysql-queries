@@ -29,3 +29,5 @@ left join address as a
 on a.address_id = store.address_id
 group by c.customer_id, a.address
 ```
+
+We should be able to remove the `a.address` from `group by` as the values for `a.address` are all the same and this will be faster.
