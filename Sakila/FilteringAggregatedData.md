@@ -15,7 +15,7 @@ join inventory
 on inventory.inventory_id = rental.inventory_id
 join film
 on film.film_id = inventory.film_id
-group by film.title
+group by film.film_id
 having sales > 200
 order by sales desc
 ```
