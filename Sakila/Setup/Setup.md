@@ -7,3 +7,11 @@ Download the sakila database `.zip` file.
 ## [Installation](https://dev.mysql.com/doc/sakila/en/sakila-installation.html)
 
 Or import the `sakila-schema.sql` first and then import `sakila-data.sql` from any UI app.
+
+## For `Laravel` get the `sql` query.
+
+```php
+DB::listen(function ($sql) {
+    var_dump($sql->sql, $sql->bindings);
+});
+```
