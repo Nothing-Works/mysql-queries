@@ -24,7 +24,7 @@ Schema::create('profiles', function (Blueprint $table) {
     $table->text('twitter_handle')->nullable();
     $table->timestamps();
 
-    $table->foreign('post_id')
+    $table->foreign('user_id')
           ->references('id')
           ->on('users')
           ->onDelete('cascade');
