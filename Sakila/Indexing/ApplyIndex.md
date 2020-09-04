@@ -2,7 +2,19 @@
 
 ## A phone book is a very old, classic, simple and easy way to show how and `Index` works.
 
-## An Index is an ordered representation of the indexed data.
+## Applying Index (Normally, `FK` and `PK` are automatically indexed)
+
+## Use `explain` to see how the query is being executed.
+
+```mysql
+select *
+from video_downloads
+where user_id = 860
+```
+
+If we do not have index on `user_id` it's going to be slow, it's much faster after we added index on `user_id`.
+
+## An Index is an ordered representation of the indexed data.(Normally, Indexes are in the memory)
 
 ## Example
 
