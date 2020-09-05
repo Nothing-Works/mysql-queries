@@ -2,6 +2,8 @@
 
 ## A phone book is a very old, classic, simple and easy way to show how and `Index` works.
 
+## When to use index: (From mysql docs)Indexes are less important for queries on small tables, or big tables where report queries process most or all of the rows. When a query needs to access most of the rows, reading sequentially is faster than working through an index. Sequential reads minimize disk seeks, even if not all the rows are needed for the query. So you will not benefit too much for small tables and can make the performance worse if you use the index to access all or most of the rows.
+
 ## Applying Index (Normally, `FK` and `PK` are automatically indexed)
 
 ## Use `explain` to see how the query is being executed.
